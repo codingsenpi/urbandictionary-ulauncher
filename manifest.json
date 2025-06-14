@@ -1,0 +1,19 @@
+{
+  "required_api_version": "^2.0.0",
+  "name": "Urban Dictionary",
+  "description": "Get definitions from Urban Dictionary",
+  "developer_name": "Your Name",
+  "icon": "images/icon.png",
+  "options": {
+    "query_debounce": 0.5
+  },
+  "preferences": [
+    {
+      "id": "ud_kw",
+      "type": "keyword",
+      "name": "Urban Dictionary",
+      "description": "Keyword to trigger Urban Dictionary search",
+      "default_value": "ud"
+    }
+  ]
+}
