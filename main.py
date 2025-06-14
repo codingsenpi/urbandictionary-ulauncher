@@ -46,11 +46,24 @@ class KeywordQueryEventListener(EventListener):
                 ])
 
             for result in data['list']:
+                definition = result['definition'].replace('[', '').replace(']', '').strip()
+                thumbs_up = result.get('thumbs_up', 0)
+                thumbs_down = result.get('thumbs_down', 0)
+                example = result.get('example', '').strip()
+                
+                #Truncate long definitions
+                if len(definition) > 300:
+                    definition = definition[:300] + "..."
+
+                description = f"{definition}\n👍 {thumbs_up}  👎 {thumbs_down}"
+                if example:
+                    description += f"\n\nExample: {example}"
+
                 items.append(
                     ExtensionResultItem(
                         icon='images/icon.png',
                         name=result['word'],
-                        description=result['definition'],
+                        description=description,
                         on_enter=CopyToClipboardAction(result['definition'])
                     )
                 )
