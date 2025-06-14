@@ -21,7 +21,7 @@ Made with ❤️ by [codingsenpi](https://www.codingsenpi.me) for Ulauncher
 
   Type a word or phrase to look up:
 
-  ud simp
+  `ud simp`
 
   Hit Enter to copy the definition.
 
@@ -31,11 +31,11 @@ ud amogus
 
 Returns:
 
-    Top definitions for "amogus"
+  Top definitions for `amogus`
 
-    Example usage (if available)
+  Example usage (if available)
 
-    👍 6262 👎 163
+  👍 6262 👎 163
 
 💡 Customization
 
